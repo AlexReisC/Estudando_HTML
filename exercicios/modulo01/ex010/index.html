@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tente abrir esse site em dispotisitivos diferentes ou simplesmente aumente e diminua o tamamho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-P.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-M.png" type="image/png">
+        <img src="imagens/Foto-G.png" alt="Foto flexivel">
+    </picture>
+    <!-- Define imagens de tamanhos diferentes para tamanhos de tela diferentes. Por padrão carrega imagem foto-g, mas se o navegador tiver menos de 1000p carrega a imagem foto-M e se tiver menos de 750px carrega a foto-P.-->
+    <h1>Reproduzindo aúdios</h1>
+    <p>Vamos aprender a reproduzir aúdios em HTML5.</p>
+    <!-- <audio src="midia/Read All Over - Nathan Moore.mp3" controls autoplay></audio> -->
+    <!-- Reproduz aúdios. controls é um parametro que faz aparecer os controles de audio no site, autplay reproduz o aúdio -->
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/Read All Over - Nathan Moore.mp3" type="audio/mpeg">
+        <source src="midia/Read All Over - Nathan Moore.ogg" type="audio/ogg">
+        <source src="midia/Read All Over - Nathan Moore.wav" type="audio/wav">
+        <p>Seu navegador não consegue reproduzir aúdio. <a href="midia/Read All Over - Nathan Moore.mp3">Clique aqui para baixar o arquivo</a></p>
+    </audio>
+    <!-- Tenta carregar uma desses arquivos em ordem. Parametro preload: auto ( só considera que o site terminou de carregar depois de carregar todo o aúdio), metadata ( carrega nome do arquivo, data, duração), none (não carrega nada, só quando o usuario da o play).-->
+    <!-- parametro loop faz um aúdio/video ficar repetindo -->
+</body>
+</html>
